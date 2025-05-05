@@ -20,8 +20,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('', include('cars.urls')),
     path('admin/', admin.site.urls),
-    path('api/', include('cars.urls')),  
+    path('api/', include('cars.urls')),
 ]
 
 if settings.DEBUG:
